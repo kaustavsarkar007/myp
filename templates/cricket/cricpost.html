@@ -1,0 +1,16 @@
+{% extends 'home/index.html' %}
+
+{% block title %} Blogpost {% endblock title %}
+
+{% block body %}
+<div class="container is-max-desktop">
+  <div class="content is-normal">
+    <h2 class="blog-post-title">{{cric.title}}</h2>
+    <p class="blog-post-meta">{{cric.timestamp}} by <a href="/about">{{cric.author}}</a></p>
+    
+    <p>{{cric.content|safe}}</p>
+ 
+    
+  </div>
+</div>
+{% endblock %}

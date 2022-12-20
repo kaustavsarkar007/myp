@@ -1,0 +1,59 @@
+{% extends 'home/index.html' %}
+
+{% block title%} Home {% endblock title%}
+
+{% block body %}
+
+
+
+<div class="container ">
+  <div class="columns">
+    <div class="column is-three-fifths">
+      <h2 class="title is-2">Football</h2>
+      {% for foot in foots %}
+      
+      <div class="tile is-parent" width= "330" height="262">
+        <article class="tile is-child notification is-primary">
+          <p class="title has-text-black">{{foot.title}}</p>
+          <p class="subtitle">{{foot.timestamp}}</p>
+          <div class="content">
+            {{foot.content|safe|truncatechars:100}}
+          </div>
+          
+        </article>
+        
+      
+      </div>
+      {% endfor %}
+
+
+
+      <h2 class="title is-2">Cricket</h2>
+      {% for crick in cricks %}
+      
+      <div class="tile is-parent" width= "330" height="262">
+        <article class="tile is-child notification is-link">
+          <p class="title has-text-black">{{crick.title}}</p>
+          <p class="subtitle">{{crick.timestamp}}</p>
+          <div class="content">
+            {{crick.content|safe|truncatechars:100}}
+          </div>
+          
+        </article>
+        
+      
+      </div>
+      {% endfor %}
+    
+    </div>
+    <div class="column">
+      <h2 class="title is-2">About</h2>
+      <p class="mb-5">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+      
+    </div>
+
+  </div>
+  
+</div>
+
+{% endblock body %}

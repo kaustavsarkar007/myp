@@ -1,0 +1,16 @@
+{% extends 'home/index.html' %}
+
+{% block title %} Blogpost {% endblock title %}
+
+{% block body %}
+<div class="container is-max-desktop">
+  <div class="content is-normal">
+    <h2 class="blog-post-title">{{foot.title}}</h2>
+    <p class="blog-post-meta">{{foot.timestamp}} by <a href="/about">{{foot.author}}</a></p>
+    
+    <p>{{foot.content|safe}}</p>
+ 
+    
+  </div>
+</div>
+{% endblock %}
